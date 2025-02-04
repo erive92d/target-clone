@@ -1,14 +1,16 @@
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import React from "react";
+import NavButtonsWithArrow from "./NavButtonsWithArrow";
 
 const UserSection = () => {
   return (
     <div className="navbar-end gap-6 lg:gap-2 font-light text-sm w-1/3 lg:w-auto ">
-      <button className="lg:flex gap-2 items-center dropdown">
+      <button className="lg:flex gap-2 items-center dropdown ">
         <div className=" navbar-start drawer drawer-end w-1/3 ">
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content">
-            {/* Page content here */}
             <label htmlFor="my-drawer-2" className="btn btn-ghost">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +30,6 @@ const UserSection = () => {
               className="drawer-overlay"
             ></label>
             <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4 ">
-              {/* Sidebar content here */}
               <li>
                 <a>Sidebar Item 1</a>
               </li>
@@ -62,11 +63,11 @@ const UserSection = () => {
 
 const InputSearchBar = () => {
   return (
-    <div className="flex-1 w-full order-4 lg:order-none ">
-      <div className=" bg-gray-100 rounded-full w-full  py-2 px-4 flex justify-between">
+    <div className=" flex-1 w-full order-4 lg:order-none lg:w-auto">
+      <div className=" bg-gray-100 rounded-full w-full lg:w-auto py-2 px-4 flex justify-between">
         <input
           type="text"
-          className=" bg-transparent focus:outline-none w-full"
+          className=" bg-transparent focus:outline-none"
           placeholder="What can we help you find?"
         />
         <svg
@@ -131,23 +132,15 @@ export default function Main() {
         </div>
       </div>
       {/* Large displays */}
-      <div className="lg:navbar-start gap-6 navbar-center w-1/3 lg:w-auto ">
-        <button className="text-red-600 font-bold text-xl">FakeTarget</button>
-        <ul className="hidden lg:flex gap-4 font-bold ">
-          <li>
-            <Link className="" href="/">
-              Categories
-            </Link>
-          </li>
-          <li>
-            <Link href="/">Deals</Link>
-          </li>
-          <li>
-            <Link href="/">New & featured</Link>
-          </li>
-          <li>
-            <Link href="/">Pickup & delivery</Link>
-          </li>
+      <div className="lg:navbar-start gap-8 navbar-center w-1/3 lg:w-auto ">
+        <button className="text-red-600 font-bold ">
+          <i className="fa-solid fa-bullseye text-4xl"></i>
+        </button>
+        <ul className="hidden lg:flex gap-4">
+          <NavButtonsWithArrow title="Categories" />
+          <NavButtonsWithArrow title="Deals" />
+          <NavButtonsWithArrow title="New & featured" />
+          <NavButtonsWithArrow title="Pickup & delivery" />
         </ul>
       </div>
       {/* input search bar */}

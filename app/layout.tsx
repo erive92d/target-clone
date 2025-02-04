@@ -23,6 +23,10 @@ export default function RootLayout({
         <Navbar />
         {children}
       </body>
+      <script
+        src="https://kit.fontawesome.com/0e4932fb22.js"
+        crossOrigin="anonymous"
+      ></script>
     </html>
   );
 }
