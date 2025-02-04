@@ -3,7 +3,7 @@ import React from "react";
 
 const UserSection = () => {
   return (
-    <div className="navbar-end gap-6 lg:gap-2 font-light text-sm w-1/3 lg:w-96 ">
+    <div className="navbar-end gap-6 lg:gap-2 font-light text-sm w-1/3 lg:w-auto ">
       <button className="lg:flex gap-2 items-center dropdown">
         <div className=" navbar-start drawer drawer-end w-1/3 ">
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -62,11 +62,11 @@ const UserSection = () => {
 
 const InputSearchBar = () => {
   return (
-    <div className=" flex-1 w-full order-4 lg:order-none lg:w-auto">
-      <div className=" bg-gray-100 rounded-full w-full lg:w-auto py-2 px-4 flex justify-between">
+    <div className="flex-1 w-full order-4 lg:order-none ">
+      <div className=" bg-gray-100 rounded-full w-full  py-2 px-4 flex justify-between">
         <input
           type="text"
-          className=" bg-transparent focus:outline-none"
+          className=" bg-transparent focus:outline-none w-full"
           placeholder="What can we help you find?"
         />
         <svg
@@ -131,7 +131,7 @@ export default function Main() {
         </div>
       </div>
       {/* Large displays */}
-      <div className="lg:navbar-start gap-8 navbar-center w-1/3 lg:w-auto ">
+      <div className="lg:navbar-start gap-6 navbar-center w-1/3 lg:w-auto ">
         <button className="text-red-600 font-bold text-xl">FakeTarget</button>
         <ul className="hidden lg:flex gap-4 font-bold ">
           <li>
