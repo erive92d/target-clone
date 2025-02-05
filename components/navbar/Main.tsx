@@ -6,7 +6,7 @@ import NavButtonsWithArrow from "./NavButtonsWithArrow";
 
 const UserSection = () => {
   return (
-    <div className="navbar-end gap-6 lg:gap-2 font-light text-sm w-1/3 lg:w-auto ">
+    <div className="navbar-end lg:gap-2 font-light text-sm w-1/3 lg:w-auto ">
       <button className="lg:flex gap-2 items-center dropdown ">
         <div className=" navbar-start drawer drawer-end w-1/3 ">
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -132,7 +132,7 @@ export default function Main() {
         </div>
       </div>
       {/* Large displays */}
-      <div className="lg:navbar-start gap-8 navbar-center w-1/3 lg:w-auto ">
+      <div className="lg:navbar-start gap-8 justify-center w-1/3 lg:w-auto ">
         <button className="text-red-600 font-bold ">
           <i className="fa-solid fa-bullseye text-4xl"></i>
         </button>

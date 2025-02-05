@@ -22,11 +22,11 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <script
+          src={process.env.NEXT_PUBLIC_FONTAWESOME_KIT}
+          crossOrigin="anonymous"
+        ></script>
       </body>
-      <script
-        src="https://kit.fontawesome.com/0e4932fb22.js"
-        crossOrigin="anonymous"
-      ></script>
     </html>
   );
 }
