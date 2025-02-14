@@ -64,10 +64,10 @@ const UserSection = () => {
 const InputSearchBar = () => {
   return (
     <div className=" flex-1 w-full order-4 lg:order-none lg:w-auto">
-      <div className=" bg-gray-100 rounded-full w-full lg:w-auto py-2 px-4 flex justify-between">
+      <div className=" bg-gray-100 rounded-full w-full py-2 px-4 flex justify-between">
         <input
           type="text"
-          className=" bg-transparent focus:outline-none"
+          className=" bg-transparent focus:outline-none w-full"
           placeholder="What can we help you find?"
         />
         <svg
