@@ -26,7 +26,7 @@ export default function Products({ products }: ProductTypes) {
 
     return (
         <>
-            <Tabs setSelectedCategory={setSelectedCategory} selectedCategory={selectedCategory} />
+            {/* <Tabs setSelectedCategory={setSelectedCategory} selectedCategory={selectedCategory} /> */}
             <ShowItems items={filteredItems} />
         </>
     )

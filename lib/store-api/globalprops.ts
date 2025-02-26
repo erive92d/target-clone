@@ -3,7 +3,7 @@ export type ProductType = {
     description: string
     id: number
     image: string
-    price: string
+    price: number
     raing: {
         rate: number,
         count: number

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function TopLayer() {
   return (
-    <nav className="navbar bg-red-600 text-white text-sm py-4 px-14 border-b">
+    <nav className="navbar bg-red-700 text-white text-sm py-0 px-14 border-b">
       <div className="navbar-start gap-2 w-auto">
         <Link href="/">Ship to 99999</Link>
         <Link href="/">New York</Link>
