@@ -3,26 +3,29 @@ import Image from "next/image"
 
 
 interface CarouselProp {
-    product: ProductType
-    index: number
+    products: ProductType[]
 }
 
-
-export const CarouselComponent = ({ product, index }: CarouselProp) => (
-    <div key={index} className='carousel-item bg-white w-48 py-4 px-2 flex-col'>
-        <div className="w-32 h-48 relative mx-auto">
-            <Image
-                layout='fill'
-                objectFit="contain"
-                src={product.image}
-                alt="Burger" />
+export default function CarouselComponent({ products }: CarouselProp) {
+    return (
+        <div className='carousel w-full gap-4'>
+            {products && products.map((item, index) => (
+                <div key={index} className='carousel-item bg-white w-48 p-4 flex-col text-sm rounded-xl'>
+                    <div className="w-32 h-48 relative mx-auto">
+                        <Image layout="fill" objectFit="contain" src={item.image} alt="image" />
+                    </div>
+                    <p className='font-bold'>
+                        ${item.price}
+                    </p>
+                    <h1 className=' truncate'>
+                        {item.title}
+                    </h1>
+                    <button className="bg-red-700 rounded-2xl py-2 font-semibold text-xs text-white mt-4">
+                        Add to cart
+                    </button>
+                </div>
+            ))}
         </div>
-        <p className='font-bold'>
-            ${product.price}
-        </p>
-        <h1 className=' truncate'>
-            {product.title}
-        </h1>
-    </div>
+    )
+}
 
-)

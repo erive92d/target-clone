@@ -7,7 +7,7 @@ export default async function Home() {
 
   const products = await fetchAll()
   const lowPricedItems = await products.filter((prod: ProductType) => prod.price < 30)
-  console.log(lowPricedItems, "low")
+
   return (
     <div className="lg:w-4/5 mx-auto py-8">
       <Trending lowPriced={lowPricedItems} />
