@@ -1,5 +1,6 @@
 import { ProductType } from "@/lib/store-api/globalprops"
 import Image from "next/image"
+import Link from "next/link"
 
 
 interface CarouselProp {
@@ -17,9 +18,9 @@ export default function CarouselComponent({ products }: CarouselProp) {
                     <p className='font-bold'>
                         ${item.price}
                     </p>
-                    <h1 className=' truncate'>
+                    <Link href={`/product/${item.id}`} className='truncate link-hover'>
                         {item.title}
-                    </h1>
+                    </Link>
                     <button className="bg-red-700 rounded-2xl py-2 font-semibold text-xs text-white mt-4">
                         Add to cart
                     </button>

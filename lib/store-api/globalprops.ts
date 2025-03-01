@@ -4,7 +4,7 @@ export type ProductType = {
     id: number
     image: string
     price: number
-    raing: {
+    rating: {
         rate: number,
         count: number
     }

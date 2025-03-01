@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,21 +14,20 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} bg-white min-h-screen text-gray-700`}
-      >
+      <body className={`${inter.className} bg-white min-h-screen text-gray-700`}>
         <Navbar />
         {children}
         <Footer />
-        <script
+
+        {/* ✅ Use Script for FontAwesome */}
+        <Script
           src={process.env.NEXT_PUBLIC_FONTAWESOME_KIT}
+          strategy="afterInteractive"
           crossOrigin="anonymous"
-        ></script>
+        />
       </body>
     </html>
   );
