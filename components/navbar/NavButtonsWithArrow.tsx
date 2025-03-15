@@ -1,8 +1,22 @@
+import CategoriesDrop from "./CategoriesDrop";
+import DealsDrop from "./DealsDrop";
+
 export default function NavButtonsWithArrow({ title }: { title: string }) {
+
+  function buttonFunction(titleGv: string) {
+    if (titleGv === "Categories") {
+      return <CategoriesDrop />
+    } else if (titleGv === "Deals") {
+      return <DealsDrop />
+    } else {
+      return title
+    }
+
+  }
+
   return (
-    <li className="btn btn-ghost relative group flex items-center gap-1 py-1 px-3 rounded-3xl">
-      <p>{title}</p>
-      <i className="fa-solid fa-chevron-down opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-xs"></i>
+    <li className="btn btn-ghost relative group  py-1 px-3 rounded-3xl">
+      {buttonFunction(title)}
     </li>
   );
 }

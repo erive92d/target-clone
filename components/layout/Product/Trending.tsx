@@ -7,7 +7,7 @@ interface TrendingProps {
 
 export default function Trending({ lowPriced }: TrendingProps) {
     return (
-        <div className=' bg-red-100 px-8 py-6'>
+        <div className=' bg-red-100 px-8 py-6 '>
             <h1 className='text-2xl font-bold text-center py-4'>
                 Under $30 you'll love
             </h1>
